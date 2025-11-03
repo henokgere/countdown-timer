@@ -22,6 +22,9 @@
     --glass: rgba(255,255,255,0.03);
     --shadow: 0 6px 18px rgba(0,0,0,0.6);
   }
+  .form input[type="number"]{
+    border: var(--text) 1px
+  }
 }
 
 /* light/dark toggle class override */
@@ -64,49 +67,6 @@ body {
   margin:0;
   font-size:1.5rem;
   letter-spacing: -0.01em;
-}
-
-.theme-toggle{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  color:var(--muted);
-}
-
-.switch{
-  position:relative;
-  display:inline-block;
-  width:46px;
-  height:26px;
-}
-.switch input{
-  display:none;
-}
-.slider{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03));
-  border-radius:999px;
-  transition: background .25s var(--ease), transform .25s var(--ease);
-  box-shadow: 0 2px 6px rgba(2,6,23,0.08) inset;
-}
-.slider::after{
-  content:"";
-  position:absolute;
-  left:4px;
-  top:4px;
-  width:18px;
-  height:18px;
-  background:var(--card);
-  border-radius:50%;
-  transition: transform .28s var(--ease), background .28s var(--ease);
-  box-shadow: 0 4px 10px rgba(2,6,23,0.08);
-}
-.switch input:checked + .slider{
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-}
-.switch input:checked + .slider::after{
-  transform: translateX(20px);
 }
 
 .controls{
