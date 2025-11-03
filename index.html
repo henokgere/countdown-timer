@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Countdown — Circle Transition</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1>Countdown Timer</h1>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input id="themeToggle" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <span class="theme-label">Dark</span>
+      </div>
+    </header>
+
+    <section class="controls" id="inputSection">
+      <form id="countdownForm" class="form" autocomplete="off">
+        <div class="row">
+          <label>
+            Days
+            <input name="days" type="number" min="0" value="0" />
+          </label>
+          <label>
+            Hours
+            <input name="hours" type="number" min="0" max="23" value="0" />
+          </label>
+          <label>
+            Minutes
+            <input name="minutes" type="number" min="0" max="59" value="0" />
+          </label>
+          <label>
+            Seconds
+            <input name="seconds" type="number" min="0" max="59" value="10" />
+          </label>
+        </div>
+
+        <div class="row">
+          <button type="submit" class="btn primary">Start Countdown</button>
+          <button type="button" id="cancelBtn" class="btn" disabled>Cancel</button>
+        </div>
+      </form>
+      <p class="hint">Enter a duration and press Start. The input will transition into circular countdowns.</p>
+    </section>
+
+    <section class="timer hidden" id="timerSection" aria-live="polite">
+      <div class="circles-grid" id="circlesGrid">
+        <!-- SVG circles are created dynamically by script -->
+      </div>
+
+      <div class="legend">
+        <div class="time-values" id="timeValues">
+          <!-- Numeric values updated by script -->
+        </div>
+      </div>
+
+      <div class="controls small">
+        <button id="resetBtn" class="btn">Reset</button>
+        <button id="pauseBtn" class="btn">Pause</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Built with HTML · CSS · JavaScript — Easing transition to circular timers</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
