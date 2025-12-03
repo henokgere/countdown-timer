@@ -5,6 +5,8 @@
   --muted: #536070;
   --accent: #4f46e5;
   --accent-2: #06b6d4;
+  --cancel: #d80b0b;
+  --cancel-2: #e26038;
   --glass: rgba(15,23,36,0.06);
   --radius: 12px;
   --shadow: 0 6px 18px rgba(2,6,23,0.08);
@@ -19,6 +21,8 @@
     --muted: #9aa7bf;
     --accent: #7c5cff;
     --accent-2: #06e6f0;
+    --cancel: #d81a1a;
+    --cancel-2: #d8624e;
     --glass: rgba(255,255,255,0.03);
     --shadow: 0 6px 18px rgba(0,0,0,0.6);
   }
@@ -119,6 +123,11 @@ body {
 }
 .btn.primary{
   background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:white;
+  box-shadow: 0 8px 20px rgba(79,70,229,0.12);
+}
+.btn.cancel{
+  background:linear-gradient(90deg,var(--cancel),var(--cancel-2));
   color:white;
   box-shadow: 0 8px 20px rgba(79,70,229,0.12);
 }
